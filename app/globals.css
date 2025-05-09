@@ -14,3 +14,35 @@
   --background-color-primary: #933c24;
   --background-color-secondary: #e9bd8c;
 }
+
+@layer component {
+  .nav-item {
+    @apply transition-all;
+  }
+
+  .nav-item:hover {
+    @apply text-ui-gold;
+  }
+
+  .btn {
+    @apply bg-ui-brown text-ui-primary py-3 rounded text-2xl font-semibold transition-all cursor-pointer;
+  }
+
+  .btn:hover {
+    background-color: rgb(150, 73, 52);
+  }
+
+  .selected {
+  }
+
+  .selected::after {
+    content: "";
+    display: inline-block;
+    height: 3px;
+    width: 100%;
+    background-color: var(--color-ui-brown);
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+  }
+}
